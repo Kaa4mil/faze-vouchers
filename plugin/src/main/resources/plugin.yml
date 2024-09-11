@@ -1,0 +1,5 @@
+name: Faze-Vouchers
+main: dev.kaa4mil.fazevouchers.VouchersPlugin
+version: 1.0-InDEV
+authors: [Kaa4mil]
+api-version: 1.13
