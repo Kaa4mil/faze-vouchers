@@ -40,36 +40,4 @@ public class ItemBuilder {
         return this;
     }
 
-    public static ItemStack formatItem(@NotNull ItemStack item, double balance, @NotNull String name) {
-        item = new ItemBuilder(item.getType())
-                .setLore(List.of(item.getItemMeta().getLore().stream().map(lore -> lore
-                        .replace("{BALANCE}", String.valueOf(balance))
-                        .replace("{PLAYER}", name)
-                ).toArray(String[]::new)))
-                .setName(item.getItemMeta().getDisplayName()
-                        .replace("{BALANCE}", String.valueOf(balance))
-                        .replace("{PLAYER}", name)
-                )
-                .getItem();
-
-        return item;
-    }
-
-    public static ItemStack formatProduct(@NotNull ItemStack item, double price, double balance, @NotNull String name) {
-        item = new ItemBuilder(item.getType())
-                .setLore(List.of(item.getItemMeta().getLore().stream().map(lore -> lore
-                        .replace("{PRICE}", String.valueOf(price))
-                        .replace("{BALANCE}", String.valueOf(balance))
-                        .replace("{PLAYER}", name)
-                ).toArray(String[]::new)))
-                .setName(item.getItemMeta().getDisplayName()
-                        .replace("{PRICE}", String.valueOf(price))
-                        .replace("{BALANCE}", String.valueOf(balance))
-                        .replace("{PLAYER}", name)
-                )
-                .getItem();
-
-        return item;
-    }
-
 }

@@ -19,7 +19,6 @@ public class VouchersPlugin extends FazeBukkit {
 
     private LiteCommands<CommandSender> liteCommands;
 
-
     @Override
     public void enable() {
 
